@@ -5,14 +5,13 @@ using System.Collections;
 
 public class RayCast : MonoBehaviour
 {
-    [SerializeField] private string selectableTag = "Selectable";
-    //[SerializeField] private string recuperableTag = "Recuperable";
-    //private ItemsPickup itemsPickup;
-      
+    [SerializeField] private LayerMask wallMask;
+    [SerializeField] private LayerMask objectMask;
+    private ItemsPickup itemsPickup;
 
+    public static bool rayCastActive = true;
+     
     private Transform _selection;
-
-    
 
     void Update()
     {
@@ -23,35 +22,34 @@ public class RayCast : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            // création du raycast sur la caméra
-            var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            // contient l'objet touché par le raycast
-            RaycastHit hit;
-            // condition lu si touché par le raycast
-            if (Physics.Raycast(ray, out hit))
+            if (rayCastActive)
             {
-                var selection = hit.transform;
-                if (selection.CompareTag(selectableTag))
+                // création du raycast sur la caméra
+                var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                // contient l'objet touché par le raycast
+                RaycastHit hit;
+                // condition lu si touché par le raycast
+                if (Physics.Raycast(ray, out hit, 200, wallMask))
                 {
+                    Debug.Log(hit.transform.name);
+                    var selection = hit.transform;
                     CameraManager.SwitchCamera(selection.transform.GetComponentInChildren<CinemachineVirtualCamera>());
                     Touch.isSwipeActive = false;
+                    _selection = selection;
                 }
-                _selection = selection;    
-            }
 
-            /*if (Physics.Raycast(ray, out hit, 10))
-            {
-                var selection = hit.transform;
-                if (selection.CompareTag(recuperableTag))
+                if (Physics.Raycast(ray, out hit, 10, objectMask))
                 {
+                    var selection = hit.transform;
                     Debug.Log(itemsPickup);
+                    itemsPickup = hit.transform.gameObject.GetComponent<ItemsPickup>();
                     itemsPickup.Pickup();
+                    _selection = selection;
                 }
-                _selection = selection;
-            }*/
+            }
         }
         
-
+        
         
     }
 }

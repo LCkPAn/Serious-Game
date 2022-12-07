@@ -22,6 +22,7 @@ public class CameraManager : MonoBehaviour
 
     public static void SwitchCamera(CinemachineVirtualCamera camera)
     {
+        Debug.Log(camera);
         if(camera != ActiveCamera)
         {
             InitCamera = ActiveCamera;
@@ -61,7 +62,7 @@ public class CameraManager : MonoBehaviour
 
     public static void SwitchCameraRight()
     {
-
+        RayCast.rayCastActive = true;
         for (int i = 0; i < cameras.Count; i++)
         {
             if (ActiveCamera == cameras[i]) 
@@ -91,13 +92,11 @@ public class CameraManager : MonoBehaviour
                 return;
             }
         }
-
-        
     }
 
     public static void SwitchCameraLeft()
     {
-
+        RayCast.rayCastActive = true;
         for (int i = 0; i < cameras.Count; i++)
         {
             if (ActiveCamera == cameras[i])

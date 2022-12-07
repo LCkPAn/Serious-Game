@@ -196,7 +196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: ac83182cc5c39f04aae42d0e0bd10c46, type: 3}
       propertyPath: m_TagString
-      value: Selectable
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ac83182cc5c39f04aae42d0e0bd10c46, type: 3}
@@ -219,9 +219,9 @@ GameObject:
   - component: {fileID: 51522133}
   - component: {fileID: 51522132}
   - component: {fileID: 51522131}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ItemTest
-  m_TagString: Recuperable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c614b80144c2a6841bc361d0091249a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 0}
+  item: {fileID: 11400000, guid: 4499f0db5747adc4b87f9b3b055006ff, type: 2}
 --- !u!65 &51522133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -500,7 +500,7 @@ MonoBehaviour:
   m_UpdateMethod: 2
   m_BlendUpdateMethod: 1
   m_DefaultBlend:
-    m_Style: 1
+    m_Style: 0
     m_Time: 1
     m_CustomCurve:
       serializedVersion: 2
@@ -1002,8 +1002,12 @@ PrefabInstance:
       value: Table
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: 6da8d687aa7161842873e51a72720709, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 6da8d687aa7161842873e51a72720709, type: 3}
       propertyPath: m_TagString
-      value: Selectable
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6da8d687aa7161842873e51a72720709, type: 3}
@@ -1077,6 +1081,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 935e85b90b278464e8a16e520d21197a, type: 3}
       propertyPath: m_Name
       value: "m\xE9daille"
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 935e85b90b278464e8a16e520d21197a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 935e85b90b278464e8a16e520d21197a, type: 3}
       propertyPath: m_TagString
@@ -1762,7 +1770,7 @@ GameObject:
   - component: {fileID: 569336327}
   - component: {fileID: 569336326}
   - component: {fileID: 569336325}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1879,8 +1887,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e38f3657b4582b4ab61d0048d9da919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectableTag: Selectable
-  recuperableTag: Recuperable
+  wallMask:
+    serializedVersion: 2
+    m_Bits: 64
+  objectMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!4 &587833069
 Transform:
   m_ObjectHideFlags: 0
@@ -2363,7 +2375,7 @@ GameObject:
   - component: {fileID: 731147169}
   - component: {fileID: 731147168}
   - component: {fileID: 731147167}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2928,8 +2940,12 @@ PrefabInstance:
       value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: 3ad164825fbd6c844b16522cc9591de1, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: 3ad164825fbd6c844b16522cc9591de1, type: 3}
       propertyPath: m_TagString
-      value: Selectable
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ad164825fbd6c844b16522cc9591de1, type: 3}
@@ -3116,42 +3132,15 @@ PrefabInstance:
       value: Armoire
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: bd81bab5017509d4f80dac7319ce5008, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: bd81bab5017509d4f80dac7319ce5008, type: 3}
       propertyPath: m_TagString
-      value: Selectable
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd81bab5017509d4f80dac7319ce5008, type: 3}
---- !u!1 &981619247
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 981619248}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &981619248
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 981619247}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 269602255}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &983909835
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3464,37 +3453,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f067f16ff3f0654aadafb857bd394da, type: 3}
---- !u!1 &1147215735
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1147215736}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1147215736
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1147215735}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1734330813}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1222994415
 GameObject:
   m_ObjectHideFlags: 0
@@ -3983,8 +3941,12 @@ PrefabInstance:
       value: Tableau
       objectReference: {fileID: 0}
     - target: {fileID: 8164078558771037576, guid: be25ad9d71fb05b4b862d74836f03e5a, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8164078558771037576, guid: be25ad9d71fb05b4b862d74836f03e5a, type: 3}
       propertyPath: m_TagString
-      value: Selectable
+      value: Untagged
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be25ad9d71fb05b4b862d74836f03e5a, type: 3}
@@ -4902,37 +4864,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3ad164825fbd6c844b16522cc9591de1, type: 3}
---- !u!1 &1774340062
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1774340063}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1774340063
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774340062}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1912749545}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1810992282
 GameObject:
   m_ObjectHideFlags: 0
@@ -5459,7 +5390,7 @@ GameObject:
   - component: {fileID: 1985682272}
   - component: {fileID: 1985682271}
   - component: {fileID: 1985682270}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: cm
   m_TagString: Untagged
   m_Icon: {fileID: 0}

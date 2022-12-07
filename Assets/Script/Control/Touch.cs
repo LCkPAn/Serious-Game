@@ -26,14 +26,12 @@ public class Touch : MonoBehaviour
         swipeListener.OnSwipe.AddListener(OnSwipe);
     }
 
-   
-
     public void OnSwipe(string swipe)
     {
-        Debug.Log(isSwipeActive);
 
         if (isSwipeActive)
         {
+            RayCast.rayCastActive = false;
             switch (swipe)
             {
                 case "Left":
@@ -52,9 +50,6 @@ public class Touch : MonoBehaviour
             }
         }
     }
-
-
-    
 
     private void OnDisable()
     {
