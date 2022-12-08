@@ -24,6 +24,7 @@ public class RayCast : MonoBehaviour
         {
             if (rayCastActive)
             {
+                Touch.isSwipeActive = false;
                 // création du raycast sur la caméra
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 // contient l'objet touché par le raycast
@@ -31,10 +32,8 @@ public class RayCast : MonoBehaviour
                 // condition lu si touché par le raycast
                 if (Physics.Raycast(ray, out hit, 200, wallMask))
                 {
-                    Debug.Log(hit.transform.name);
                     var selection = hit.transform;
-                    CameraManager.SwitchCamera(selection.transform.GetComponentInChildren<CinemachineVirtualCamera>());
-                    Touch.isSwipeActive = false;
+                    CameraManager.SwitchCamera(selection.transform.GetComponentInChildren<CinemachineVirtualCamera>());    
                     _selection = selection;
                 }
 

@@ -16,24 +16,22 @@ public class Inventory : MonoBehaviour
         Instance = this;
     }
 
-    public void ListItems()
+    /*public void ListItems()
     {
-        /*foreach(Transform item in ItemContent)
+        foreach (var item in Items)
         {
-            GameObject.Destroy(item.gameObject);
-        }*/
-        /*foreach (var item in Items)
-        {
-
-            GameObject obj = Instantiate(InventoryItem, ItemContent);
-            var itemName = obj.transform.Find("ItemName").GetComponent<Text>();
-            var itemIcon = obj.transform.Find("ItemIcon").GetComponent<Image>();
+            GameObject obj = Instantiate(InventoryItem);
+            var itemName = obj.GetComponentInChildren<Text>();
+            var itemIcon = obj.GetComponentInChildren<Image>();
 
             itemName.text = item.itemName;
             itemIcon.sprite = item.icon;
 
-            Debug.Log("coucou");
-        }*/
+            obj.transform.SetParent(ItemContent);
+            obj.transform.localPosition = Vector3.zero;
+
+            ItemContent.Add(obj);
+        }
     }
 
     /* public void closeInventory()

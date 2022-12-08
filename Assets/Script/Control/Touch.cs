@@ -19,8 +19,8 @@ public class Touch : MonoBehaviour
         {
             wall.MoveWall();
         }
-
     }
+
     private void OnEnable()
     {
         swipeListener.OnSwipe.AddListener(OnSwipe);
@@ -28,10 +28,9 @@ public class Touch : MonoBehaviour
 
     public void OnSwipe(string swipe)
     {
-
         if (isSwipeActive)
         {
-            RayCast.rayCastActive = false;
+            //RayCast.rayCastActive = false;
             switch (swipe)
             {
                 case "Left":

@@ -5,30 +5,30 @@ using Cinemachine;
 
 public class CameraManager : MonoBehaviour
 {
-  
-    // CrÃ©ation une liste
+
+    // Création une liste
     static List<CinemachineVirtualCamera> cameras = new List<CinemachineVirtualCamera>();
 
-   //Valeur null
+    //Valeur null
     public static CinemachineVirtualCamera ActiveCamera = null;
     public static CinemachineVirtualCamera InitCamera = null;
 
 
     public static bool IsActiveCamera(CinemachineVirtualCamera camera)
     {
-        //permet de checker la camÃ©ra active
+        //permet de checker la caméra active
         return camera == ActiveCamera;
     }
 
     public static void SwitchCamera(CinemachineVirtualCamera camera)
     {
         Debug.Log(camera);
-        if(camera != ActiveCamera)
+        if (camera != ActiveCamera)
         {
             InitCamera = ActiveCamera;
             ActiveCamera = camera;
 
-            // fixe un prioritÃ© haute qui passe sur tout
+            // fixe un priorité haute qui passe sur tout
             ActiveCamera.Priority = 10;
 
             foreach (CinemachineVirtualCamera c in cameras)
@@ -62,22 +62,21 @@ public class CameraManager : MonoBehaviour
 
     public static void SwitchCameraRight()
     {
-        RayCast.rayCastActive = true;
         for (int i = 0; i < cameras.Count; i++)
         {
-            if (ActiveCamera == cameras[i]) 
+            if (ActiveCamera == cameras[i])
             {
                 if (i - 1 >= 0)
                 {
                     Debug.Log(i);
-                    ActiveCamera = cameras[i - 1]; 
+                    ActiveCamera = cameras[i - 1];
                 }
                 else
                 {
-                    ActiveCamera = cameras[cameras.Count -1];
+                    ActiveCamera = cameras[cameras.Count - 1];
                 }
 
-                // fixe un prioritÃ© haute qui passe sur tout
+                // fixe un priorité haute qui passe sur tout
                 ActiveCamera.Priority = 10;
 
                 foreach (CinemachineVirtualCamera c in cameras)
@@ -88,7 +87,6 @@ public class CameraManager : MonoBehaviour
                         c.Priority = 0;
                     }
                 }
-
                 return;
             }
         }
@@ -96,7 +94,6 @@ public class CameraManager : MonoBehaviour
 
     public static void SwitchCameraLeft()
     {
-        RayCast.rayCastActive = true;
         for (int i = 0; i < cameras.Count; i++)
         {
             if (ActiveCamera == cameras[i])
@@ -110,7 +107,7 @@ public class CameraManager : MonoBehaviour
                     ActiveCamera = cameras[0];
                 }
 
-                // fixe un prioritÃ© haute qui passe sur tout
+                // fixe un priorité haute qui passe sur tout
                 ActiveCamera.Priority = 10;
 
                 foreach (CinemachineVirtualCamera c in cameras)
@@ -124,8 +121,6 @@ public class CameraManager : MonoBehaviour
                 return;
             }
         }
-
-        
     }
 
     public static void Register(CinemachineVirtualCamera camera)
@@ -141,5 +136,5 @@ public class CameraManager : MonoBehaviour
         ;
     }
 
-  
+
 }
