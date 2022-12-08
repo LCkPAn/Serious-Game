@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -16,41 +17,15 @@ public class Inventory : MonoBehaviour
         Instance = this;
     }
 
-    /*public void ListItems()
-    {
-        foreach (var item in Items)
-        {
-            GameObject obj = Instantiate(InventoryItem);
-            var itemName = obj.GetComponentInChildren<Text>();
-            var itemIcon = obj.GetComponentInChildren<Image>();
-
-            itemName.text = item.itemName;
-            itemIcon.sprite = item.icon;
-
-            obj.transform.SetParent(ItemContent);
-            obj.transform.localPosition = Vector3.zero;
-
-            ItemContent.Add(obj);
-        }
-    }
-
-    /* public void closeInventory()
-    {
-        foreach (Transform item in ItemContent)
-        {
-            GameObject.Destroy(item.gameObject);
-        }
-    }*/
-
-
     public void Add(Item item)
     {
         Items.Add(item);
+
+        int nbItems = Items.Count - 1;
+
+        transform.GetChild(nbItems).GetChild(0).GetComponent<Image>().sprite = item.icon;
+        transform.GetChild(nbItems).GetChild(1).GetComponent<Text>().text = item.itemName;
     }
 
-    public void Remove(Item item)
-    {
-        Items.Remove(item);
-    }
 
 }

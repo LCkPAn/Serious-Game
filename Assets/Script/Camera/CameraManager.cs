@@ -135,6 +135,4 @@ public class CameraManager : MonoBehaviour
         cameras.Remove(camera);
         ;
     }
-
-
 }

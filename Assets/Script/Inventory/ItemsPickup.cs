@@ -11,5 +11,4 @@ public class ItemsPickup : MonoBehaviour
         Inventory.Instance.Add(item);
         Destroy(gameObject);
     }
-
 }

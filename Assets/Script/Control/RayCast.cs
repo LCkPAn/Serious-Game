@@ -23,8 +23,7 @@ public class RayCast : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             if (rayCastActive)
-            {
-                Touch.isSwipeActive = false;
+            { 
                 // création du raycast sur la caméra
                 var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 // contient l'objet touché par le raycast
@@ -33,6 +32,7 @@ public class RayCast : MonoBehaviour
                 if (Physics.Raycast(ray, out hit, 200, wallMask))
                 {
                     var selection = hit.transform;
+                    Touch.isSwipeActive = false;
                     CameraManager.SwitchCamera(selection.transform.GetComponentInChildren<CinemachineVirtualCamera>());    
                     _selection = selection;
                 }
@@ -40,7 +40,7 @@ public class RayCast : MonoBehaviour
                 if (Physics.Raycast(ray, out hit, 10, objectMask))
                 {
                     var selection = hit.transform;
-                    Debug.Log(itemsPickup);
+                    Touch.isSwipeActive = false;
                     itemsPickup = hit.transform.gameObject.GetComponent<ItemsPickup>();
                     itemsPickup.Pickup();
                     _selection = selection;

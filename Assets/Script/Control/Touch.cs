@@ -30,7 +30,8 @@ public class Touch : MonoBehaviour
     {
         if (isSwipeActive)
         {
-            //RayCast.rayCastActive = false;
+            RayCast.rayCastActive = false;
+            StartCoroutine(ActiveRayCast()); 
             switch (swipe)
             {
                 case "Left":
@@ -54,5 +55,11 @@ public class Touch : MonoBehaviour
     {
         swipeListener.OnSwipe.RemoveListener(OnSwipe);
     }
-    
+
+    IEnumerator ActiveRayCast()
+    {
+        yield return new WaitForSeconds(1);
+        RayCast.rayCastActive = true;
+    }
+
 }
