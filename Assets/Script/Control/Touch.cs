@@ -30,6 +30,7 @@ public class Touch : MonoBehaviour
     {
         if (isSwipeActive)
         {
+            Tuto.tutoOn = false;
             RayCast.rayCastActive = false;
             StartCoroutine(ActiveRayCast()); 
             switch (swipe)
@@ -38,8 +39,8 @@ public class Touch : MonoBehaviour
                     CameraManager.SwitchCameraRight();
                     MovDirection = Vector2.right;
                     break;
+
                 case "Right":
-                    
                     CameraManager.SwitchCameraLeft();
                     MovDirection = Vector2.left;
                     break;

@@ -7,7 +7,10 @@ public class RayCast : MonoBehaviour
 {
     [SerializeField] private LayerMask wallMask;
     [SerializeField] private LayerMask objectMask;
+    [SerializeField] private LayerMask NextLevelMask;
     private ItemsPickup itemsPickup;
+
+    public MainMenu mainMenu;
 
     public static bool rayCastActive = true;
      
@@ -43,6 +46,15 @@ public class RayCast : MonoBehaviour
                     Touch.isSwipeActive = false;
                     itemsPickup = hit.transform.gameObject.GetComponent<ItemsPickup>();
                     itemsPickup.Pickup();
+                    _selection = selection;
+                }
+
+                if (Physics.Raycast(ray, out hit, 200, NextLevelMask))
+                {
+                    Debug.Log("Work");
+                    var selection = hit.transform;
+                    Touch.isSwipeActive = false;
+                    mainMenu.StartGame();
                     _selection = selection;
                 }
             }

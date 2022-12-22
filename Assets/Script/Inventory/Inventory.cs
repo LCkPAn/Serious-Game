@@ -7,16 +7,18 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public static Inventory Instance;
-    public List<Item> Items = new List<Item>();
+    public static List<Item> Items = new List<Item>();
 
-    public Transform ItemContent;
-    public GameObject InventoryItem;
+
+    public DoorAnim doorAnim;
 
     private void Awake()
     {
         Instance = this;
     }
 
+
+    // récupére les objets et les mets dans mon inventaires
     public void Add(Item item)
     {
         Items.Add(item);
@@ -25,7 +27,10 @@ public class Inventory : MonoBehaviour
 
         transform.GetChild(nbItems).GetChild(0).GetComponent<Image>().sprite = item.icon;
         transform.GetChild(nbItems).GetChild(1).GetComponent<Text>().text = item.itemName;
+
+         if (Items.Count == 3)
+         {
+             doorAnim.OpenIsDoor();
+         }
     }
-
-
 }

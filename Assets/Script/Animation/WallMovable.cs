@@ -17,8 +17,6 @@ public class WallMovable : MonoBehaviour
         if (cameras == CameraManager.ActiveCamera || cameras2 == CameraManager.ActiveCamera)
         {
             transform.DOLocalMoveY(30f, 1f);
-
-            
         }
         else 
         {

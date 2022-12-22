@@ -6,12 +6,26 @@ using DG.Tweening;
 
 public class Tuto : MonoBehaviour
 {
-    /*public Image tutoImage; 
+    [SerializeField] Image tuto;
+    public static bool tutoOn = true;
 
-    void ActiveTuto()
+    public void Start()
     {
-     transform.DOMoveX(0.8f, 2).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Restart);
-     tutoImage.DOFade(0.1f, 1f).SetLoops(1, LoopType.Restart);
+        if (tutoOn)
+        {
+            tuto.transform.DOMoveX(100f, 1).SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Restart);
+            Debug.Log("Tuto");
+            //tuto.transform.DOFade(0.1f, 1f).SetLoops(1, LoopType.Restart);
+        }
     }
-    */
+
+
+    public void Update()
+    {
+
+        if(!tutoOn)
+        {
+            tuto.enabled = false;
+        }
+    }
 }

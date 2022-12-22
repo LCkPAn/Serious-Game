@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game.unity
     guid: 5a101ce91b6f2b34c9a42fcd869e96de
+  - enabled: 1
+    path: Assets/Scenes/Salle de chirurgie.unity
+    guid: 41f6aed44c703cf4099bf3766683432e
   m_configObjects: {}
