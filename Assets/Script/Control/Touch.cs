@@ -15,6 +15,7 @@ public class Touch : MonoBehaviour
 
     private void Start()
     {
+        isSwipeActive = true;
         foreach (WallMovable wall in Resources.FindObjectsOfTypeAll(typeof(WallMovable)) as WallMovable[])
         {
             wall.MoveWall();

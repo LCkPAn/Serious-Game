@@ -9,6 +9,7 @@ public class Inventory : MonoBehaviour
     public static Inventory Instance;
     public static List<Item> Items = new List<Item>();
 
+    //public DialogManager dialogManager;
 
     public DoorAnim doorAnim;
 
@@ -26,9 +27,14 @@ public class Inventory : MonoBehaviour
         int nbItems = Items.Count - 1;
 
         transform.GetChild(nbItems).GetChild(0).GetComponent<Image>().sprite = item.icon;
-        transform.GetChild(nbItems).GetChild(1).GetComponent<Text>().text = item.itemName;
+        //transform.GetChild(nbItems).GetChild(1).GetComponent<Text>().text = item.itemName;
 
-         if (Items.Count == 3)
+       /* if (item.itemName == "Diplome")
+        {
+            dialogManager.Show("Titre", "Vous avez trouvé une clef !", "OK");
+        }*/
+
+        if (Items.Count == 3)
          {
              doorAnim.OpenIsDoor();
          }

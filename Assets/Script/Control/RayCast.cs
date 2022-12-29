@@ -8,13 +8,16 @@ public class RayCast : MonoBehaviour
     [SerializeField] private LayerMask wallMask;
     [SerializeField] private LayerMask objectMask;
     [SerializeField] private LayerMask NextLevelMask;
+
     private ItemsPickup itemsPickup;
+    private Transform _selection;
 
     public MainMenu mainMenu;
+    public BoutonCanvas boutonCanvas;
+   
 
     public static bool rayCastActive = true;
-     
-    private Transform _selection;
+    
 
     void Update()
     {
@@ -36,6 +39,7 @@ public class RayCast : MonoBehaviour
                 {
                     var selection = hit.transform;
                     Touch.isSwipeActive = false;
+                    boutonCanvas.ToggleButton();
                     CameraManager.SwitchCamera(selection.transform.GetComponentInChildren<CinemachineVirtualCamera>());    
                     _selection = selection;
                 }
