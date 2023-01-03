@@ -10,23 +10,28 @@ public class ItemsPickup : MonoBehaviour
     public GameObject moveInventory;
     //public Image itemIventory;
     public Image image;
+    public GameObject emtpy;
 
     public void Pickup()
     {
         Inventory.Instance.Add(item);
         ItemTween();
-        StartCoroutine(WaitDestroy());
+        //StartCoroutine(WaitDestroy());
     }
 
     public void ItemTween()
     {
-        moveInventory.transform.DOMove(image.transform.position, 1);
-        moveInventory.transform.DOScale(0.2f, 1f);
+        transform.DOMove(emtpy.transform.position, 1);
+        transform.DOScale(0.2f, 1f).OnComplete(() => {
+            image.transform.DOScale(1.2f, 0.2f).SetLoops(2, LoopType.Yoyo).SetEase(Ease.Linear);
+            Destroy(gameObject);
+
+        }); 
     }
 
     IEnumerator WaitDestroy()
      {
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         image.transform.DOScale(1.2f, 0.5f).OnComplete(() => image.transform.DOScale(1f, 0.5f));
         Destroy(gameObject);
         //image.transform.DOScale(1f, 1f).OnComplete(() => Destroy(gameObject));

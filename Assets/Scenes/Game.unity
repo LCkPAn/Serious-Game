@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731713, g: 0.13414735, b: 0.1210785, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -246,7 +246,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 33a5e1e11b4906d4da4b39a74b104683, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33a5e1e11b4906d4da4b39a74b104683, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1801,7 +1801,7 @@ CanvasRenderer:
   m_CullTransparentMesh: 1
 --- !u!95 &439386708
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1818,7 +1818,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &524917570
 GameObject:
   m_ObjectHideFlags: 0
@@ -2755,6 +2755,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 3e17df1f8b02791418b2d75ac25b5ef5, type: 2}
   moveInventory: {fileID: 717665391}
   image: {fileID: 439386706}
+  emtpy: {fileID: 0}
 --- !u!114 &763771633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3062,6 +3063,37 @@ Transform:
   m_Father: {fileID: 987138509}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &907481985
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 907481986}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &907481986
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 907481985}
+  m_LocalRotation: {x: -0.07338687, y: -0.89253896, z: 0.15737869, w: 0.41619772}
+  m_LocalPosition: {x: -79.12915, y: 258.65338, z: 7.0464816}
+  m_LocalScale: {x: 49.090904, y: 49.09091, z: 49.090904}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1291199792}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &916316568
 GameObject:
   m_ObjectHideFlags: 0
@@ -3274,7 +3306,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: f135ff03fcad1ce40943bd3bcfa12e22, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f135ff03fcad1ce40943bd3bcfa12e22, type: 3}
       propertyPath: m_LocalScale.x
@@ -4182,6 +4214,7 @@ RectTransform:
   - {fileID: 919828487}
   - {fileID: 1131950512}
   - {fileID: 439386705}
+  - {fileID: 907481986}
   m_Father: {fileID: 1398669117}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4675,7 +4708,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: be25ad9d71fb05b4b862d74836f03e5a, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: be25ad9d71fb05b4b862d74836f03e5a, type: 3}
       propertyPath: m_LocalScale.x
@@ -5865,6 +5898,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 99cb0ec462d06e34ca10ce91f2a607df, type: 2}
   moveInventory: {fileID: 1876235235}
   image: {fileID: 439386706}
+  emtpy: {fileID: 907481985}
 --- !u!65 &1876235238
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5957,7 +5991,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 33a5e1e11b4906d4da4b39a74b104683, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 33a5e1e11b4906d4da4b39a74b104683, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6286,6 +6320,7 @@ MonoBehaviour:
   item: {fileID: 11400000, guid: 4499f0db5747adc4b87f9b3b055006ff, type: 2}
   moveInventory: {fileID: 1407427773}
   image: {fileID: 439386706}
+  emtpy: {fileID: 907481985}
 --- !u!114 &2094433892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6306,7 +6341,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
 --- !u!95 &2126437022
 Animator:
-  serializedVersion: 4
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6323,7 +6358,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &2126437023
 MonoBehaviour:
   m_ObjectHideFlags: 0
