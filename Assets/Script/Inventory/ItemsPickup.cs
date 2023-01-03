@@ -7,10 +7,7 @@ using DG.Tweening;
 public class ItemsPickup : MonoBehaviour
 {
     public Item item;
-    public GameObject moveInventory;
-    //public Image itemIventory;
     public Image image;
-    public GameObject emtpy;
 
     public void Pickup()
     {
@@ -21,7 +18,7 @@ public class ItemsPickup : MonoBehaviour
 
     public void ItemTween()
     {
-        transform.DOMove(emtpy.transform.position, 1);
+        transform.DOMove(image.transform.position, 1);
         transform.DOScale(0.2f, 1f).OnComplete(() => {
             image.transform.DOScale(1.2f, 0.2f).SetLoops(2, LoopType.Yoyo).SetEase(Ease.Linear);
             Destroy(gameObject);
