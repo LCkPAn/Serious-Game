@@ -6,6 +6,7 @@ using System.Collections;
 public class RayCast : MonoBehaviour
 {
     [SerializeField] private LayerMask wallMask;
+    [SerializeField] private LayerMask menuMask;
     [SerializeField] private LayerMask objectMask;
     [SerializeField] private LayerMask NextLevelMask;
 
@@ -14,7 +15,7 @@ public class RayCast : MonoBehaviour
 
     public MainMenu mainMenu;
     public BoutonCanvas boutonCanvas;
-   
+
 
     public static bool rayCastActive = true;
     
@@ -41,6 +42,14 @@ public class RayCast : MonoBehaviour
                     Touch.isSwipeActive = false;
                     boutonCanvas.ToggleButton();
                     CameraManager.SwitchCamera(selection.transform.GetComponentInChildren<CinemachineVirtualCamera>());    
+                    _selection = selection;
+                }
+
+                if (Physics.Raycast(ray, out hit, 200, menuMask))
+                {
+                    var selection = hit.transform;
+                    Touch.isSwipeActive = false;
+                    CameraManager.SwitchCamera(selection.transform.GetComponentInChildren<CinemachineVirtualCamera>());
                     _selection = selection;
                 }
 

@@ -22,7 +22,6 @@ public class Tuto : MonoBehaviour
 
     public void Update()
     {
-
         if(!tutoOn)
         {
             tuto.enabled = false;
