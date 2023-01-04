@@ -8,11 +8,13 @@ public class ItemsPickup : MonoBehaviour
 {
     public Item item;
     public Image image;
+    public DialogueManager dialogManager;
 
     public void Pickup()
     {
         Inventory.Instance.Add(item);
         ItemTween();
+        dialogManager.SetView();
         //StartCoroutine(WaitDestroy());
     }
 
@@ -33,7 +35,6 @@ public class ItemsPickup : MonoBehaviour
         Destroy(gameObject);
         //image.transform.DOScale(1f, 1f).OnComplete(() => Destroy(gameObject));
         //image.rectTransform.DOLocalMoveY(50f, 1f / 2).
-
      }
 
 

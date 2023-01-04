@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DialogManager : MonoBehaviour
+public class Dialog : MonoBehaviour
 {
     public Text titleText;
     public Text messageText;

@@ -18,9 +18,8 @@ public class Inventory : MonoBehaviour
         Instance = this;
     }
 
-
-    // récupére les objets et les mets dans mon inventaires
-    public void Add(Item item)
+        // récupére les objets et les mets dans mon inventaires
+        public void Add(Item item)
     {
         Items.Add(item);
 
@@ -29,9 +28,9 @@ public class Inventory : MonoBehaviour
         transform.GetChild(nbItems).GetChild(0).GetComponent<Image>().sprite = item.icon;
         //transform.GetChild(nbItems).GetChild(1).GetComponent<Text>().text = item.itemName;
 
-       /* if (item.itemName == "Diplome")
+       /*if (item.itemName == "Diplome")
         {
-            dialogManager.Show("Titre", "Vous avez trouvé une clef !", "OK");
+          Show("Titre", "Vous avez trouvé une clef !", "OK");
         }*/
 
         if (Items.Count == 3)
