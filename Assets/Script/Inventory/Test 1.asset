@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Test 1
   m_EditorClassIdentifier: 
   id: 4
-  itemName: Test
-  value: 10
+  itemName: Cube
   icon: {fileID: 21300000, guid: 3b5ad4dfc78124a489bb5c48a4b57195, type: 3}
