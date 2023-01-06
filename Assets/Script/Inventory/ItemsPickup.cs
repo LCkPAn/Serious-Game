@@ -49,7 +49,7 @@ public class ItemsPickup : MonoBehaviour
             switch (item.itemName)
             {
                 case "Diplome":
-                    Show("Titre", "At that time it was one and the same trade");
+                    Show("Titre", "At that time, barber and surgeon were one and the same profession");
                     break;
 
                 case "Medaille":
@@ -72,10 +72,6 @@ public class ItemsPickup : MonoBehaviour
                     Show("Titre", "The King's seal ? I have to go to Paris !");
                     break;
 
-                case "Heart":
-                    Show("Titre", "The first, the first! I was the first surgeon in France !");
-                    break;
-
                 case "Book":
                     Show("Titre", "The theory that earned me a place in the philosophical 'Lumières' !");
                     break;
@@ -88,6 +84,17 @@ public class ItemsPickup : MonoBehaviour
                     Show("Titre", " The time when I was a state councillor and doctor to the king");
                     break;
 
+                case "Poncon":
+                    Show("Titre", "The first, the first! I was the first surgeon in France !");
+                    break;
+
+                case "Medaille2":
+                    Show("Titre", "Napoleon offered it to me for my medical services");
+                    break;
+
+                case "stetoscope":
+                    Show("Titre", "Even if I didn't know him, he remains an essential tool in my branch");
+                    break;
             }
         });
     }

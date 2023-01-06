@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d15f8271e32990449b359d3464e2d26d, type: 3}
-  m_Name: New Item 2
+  m_Name: Medaille2
   m_EditorClassIdentifier: 
-  id: 0
-  itemName: 
-  icon: {fileID: 0}
+  id: 10
+  itemName: Medaille2
+  icon: {fileID: 21300000, guid: 4ea982fa81a1b0048ad7886f64c0d595, type: 3}

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 9
   itemName: casque
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 69164c69b4b49cb4991b227c9109081b, type: 3}

@@ -8,7 +8,7 @@ using DG.Tweening;
 public class Inventory : MonoBehaviour
 {
     public static Inventory Instance;
-    public static List<Item> Items = new List<Item>();
+    public static List<Item> Items;
 
 
 
@@ -25,6 +25,7 @@ public class Inventory : MonoBehaviour
     public void Start()
     {
       activeDoor = false;
+      Items = new List<Item>();
     }
 
     // récupére les objets et les mets dans mon inventaires

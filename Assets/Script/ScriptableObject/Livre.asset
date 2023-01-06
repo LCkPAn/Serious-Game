@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 8
   itemName: Livre
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 5a0fd5ed09030654b814a550a44e5707, type: 3}

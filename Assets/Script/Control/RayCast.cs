@@ -67,7 +67,7 @@ public class RayCast : MonoBehaviour
                     _selection = selection;
                 }
 
-                if (Physics.Raycast(ray, out hit, 10, objectMask))
+                if (Physics.Raycast(ray, out hit, 20, objectMask))
                 {
                     var selection = hit.transform;
                     Touch.isSwipeActive = false;
@@ -76,7 +76,7 @@ public class RayCast : MonoBehaviour
                     _selection = selection;
                 }
 
-                if (Physics.Raycast(ray, out hit, 8, NextLevelMask) && NextLevel)
+                if (Physics.Raycast(ray, out hit, 20, NextLevelMask) && NextLevel)
                 {
                     var selection = hit.transform;
                     Touch.isSwipeActive = false;
@@ -84,7 +84,7 @@ public class RayCast : MonoBehaviour
                     _selection = selection;
                 }
 
-                if (Physics.Raycast(ray, out hit, 10, OpenDoor) && inventory.activeDoor == true)
+                if (Physics.Raycast(ray, out hit, 20, OpenDoor) && inventory.activeDoor == true)
                 {
                     doorAnim.OpenIsDoor();
                     inventory.shakeDoor.SetActive(false);

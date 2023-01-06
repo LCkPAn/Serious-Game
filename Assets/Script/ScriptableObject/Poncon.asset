@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d15f8271e32990449b359d3464e2d26d, type: 3}
-  m_Name: New Item 1
+  m_Name: Poncon
   m_EditorClassIdentifier: 
-  id: 0
-  itemName: 
-  icon: {fileID: 0}
+  id: 11
+  itemName: Poncon
+  icon: {fileID: 21300000, guid: bfd86ea4a5c4b094c9cb1a413d33b092, type: 3}

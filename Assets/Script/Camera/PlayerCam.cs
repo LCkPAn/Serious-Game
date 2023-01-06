@@ -17,7 +17,7 @@ public class PlayerCam : MonoBehaviour
      CameraManager.Register(ThirdView);
      CameraManager.Register(FourView);
      
-     CameraManager.SwitchCamera(FourView);
+     CameraManager.SwitchCamera(SecondView);
     }
 
     private void OnDisable()

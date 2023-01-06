@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Salle de chirurgie.unity
     guid: 41f6aed44c703cf4099bf3766683432e
+  - enabled: 1
+    path: Assets/Scenes/bureauJP.unity
+    guid: 0e0d4dc8ebd74aa49b7d500f02716d9b
+  - enabled: 1
+    path: Assets/Scenes/Salle de cours.unity
+    guid: fde37bb05aab4a246a0c4a6111212abc
   m_configObjects: {}

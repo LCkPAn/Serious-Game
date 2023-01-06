@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 10
   itemName: Ceinture
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: cdfe456b1dac1184c9b5256890cfa372, type: 3}
