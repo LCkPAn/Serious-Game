@@ -9,6 +9,7 @@ public class RayCast : MonoBehaviour
     [SerializeField] private LayerMask menuMask;
     [SerializeField] private LayerMask objectMask;
     [SerializeField] private LayerMask NextLevelMask;
+    [SerializeField] private LayerMask OpenDoor;
 
     private ItemsPickup itemsPickup;
     private Transform _selection;
@@ -16,9 +17,21 @@ public class RayCast : MonoBehaviour
     public MainMenu mainMenu;
     public BoutonCanvas boutonCanvas;
 
+    public DoorAnim doorAnim;
+    public Inventory inventory;
+
+    public bool camNoSwitch = false;
+
+    public bool NextLevel = false;
 
     public static bool rayCastActive = true;
-    
+
+
+    public void DontSwtich ()
+    {
+        camNoSwitch = false;
+    }
+
 
     void Update()
     {
@@ -36,11 +49,12 @@ public class RayCast : MonoBehaviour
                 // contient l'objet touché par le raycast
                 RaycastHit hit;
                 // condition lu si touché par le raycast
-                if (Physics.Raycast(ray, out hit, 200, wallMask))
+                if (Physics.Raycast(ray, out hit, 200, wallMask) && camNoSwitch == false)
                 {
                     var selection = hit.transform;
                     Touch.isSwipeActive = false;
                     boutonCanvas.ToggleButton();
+                    camNoSwitch = true;
                     CameraManager.SwitchCamera(selection.transform.GetComponentInChildren<CinemachineVirtualCamera>());    
                     _selection = selection;
                 }
@@ -62,18 +76,33 @@ public class RayCast : MonoBehaviour
                     _selection = selection;
                 }
 
-                if (Physics.Raycast(ray, out hit, 200, NextLevelMask))
+                if (Physics.Raycast(ray, out hit, 8, NextLevelMask) && NextLevel)
                 {
-                    Debug.Log("Work");
                     var selection = hit.transform;
                     Touch.isSwipeActive = false;
                     mainMenu.StartGame();
                     _selection = selection;
+                }
+
+                if (Physics.Raycast(ray, out hit, 10, OpenDoor) && inventory.activeDoor == true)
+                {
+                    doorAnim.OpenIsDoor();
+                    inventory.shakeDoor.SetActive(false);
+                    var selection = hit.transform;
+                    Touch.isSwipeActive = false;
+                    _selection = selection;
+                    StartCoroutine(DontSkipLevel());
                 }
             }
         }
         
         
         
+    }
+
+    IEnumerator DontSkipLevel()
+    {
+        yield return new WaitForSeconds(0.3f);
+        NextLevel = true;
     }
 }

@@ -9,12 +9,12 @@ public class DoorAnim : MonoBehaviour
     //[SerializeField] public Transform doorOpen;
    public void Start()
     {
-      animDoor = GetComponent<Animator>();
+        animDoor = GetComponent<Animator>();
     }
 
     public void OpenIsDoor()
     {
-     animDoor.SetBool("Open", true);
+      animDoor.Play("Door");
     }
 
 }

@@ -20,6 +20,11 @@ public class Touch : MonoBehaviour
         {
             wall.MoveWall();
         }
+
+        foreach (WallMovableChimie wall in Resources.FindObjectsOfTypeAll(typeof(WallMovableChimie)) as WallMovableChimie[])
+        {
+            wall.MoveWall();
+        }
     }
 
     private void OnEnable()
@@ -48,6 +53,11 @@ public class Touch : MonoBehaviour
             }
 
             foreach (WallMovable wall in Resources.FindObjectsOfTypeAll(typeof(WallMovable)) as WallMovable[])
+            {
+                wall.MoveWall();
+            }
+
+            foreach (WallMovableChimie wall in Resources.FindObjectsOfTypeAll(typeof(WallMovableChimie)) as WallMovableChimie[])
             {
                 wall.MoveWall();
             }

@@ -15,7 +15,6 @@ public class BoutonCanvas : MonoBehaviour
     {
         showPauseButton = !showPauseButton;
         BackButton.gameObject.SetActive(showPauseButton);
-
         PauseButton.gameObject.SetActive(showOptionButton);
     }
 
@@ -23,7 +22,6 @@ public class BoutonCanvas : MonoBehaviour
     {
         showPauseButton = true;
         BackButton.gameObject.SetActive(showPauseButton);
-
         showOptionButton = false;
         PauseButton.gameObject.SetActive(showOptionButton);
 
