@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d15f8271e32990449b359d3464e2d26d, type: 3}
-  m_Name: New Item 3
+  m_Name: Ceinture
   m_EditorClassIdentifier: 
-  id: 6
-  itemName: 
+  id: 10
+  itemName: Ceinture
   icon: {fileID: 0}

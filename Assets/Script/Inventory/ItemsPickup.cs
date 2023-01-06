@@ -60,6 +60,10 @@ public class ItemsPickup : MonoBehaviour
                     Show("Titre", "A war memory... When I met the king");
                     break;
 
+                case "Casque":
+                    Show("Titre", "Bad memory. It was during the war that I discovered the epidemic that struck certain cities");
+                    break;
+
                 case "Scalpel":
                     Show("Titre", "The tool that paved the way for surgery");
                     break;
@@ -70,6 +74,18 @@ public class ItemsPickup : MonoBehaviour
 
                 case "Heart":
                     Show("Titre", "The first, the first! I was the first surgeon in France !");
+                    break;
+
+                case "Book":
+                    Show("Titre", "The theory that earned me a place in the philosophical 'Lumières' !");
+                    break;
+
+                case "Coffre":
+                    Show("Titre", " A chest ? It's the last gift from my students!");
+                    break;
+
+                case "Ceinture":
+                    Show("Titre", " The time when I was a state councillor and doctor to the king");
                     break;
 
             }
